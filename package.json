@@ -1,0 +1,13 @@
+{
+  "name": "peopleflow-agent-public",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node backend/server.mjs",
+    "test": "node backend/smoke-test.mjs"
+  }
+}

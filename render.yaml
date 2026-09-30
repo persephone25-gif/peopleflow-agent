@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: peopleflow-agent
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: ALLOWED_ORIGINS
+        value: https://boil-dog-94948418.figma.site,http://localhost:8443,http://127.0.0.1:8443
+      - key: RATE_LIMIT_WINDOW_MS
+        value: 600000
+      - key: RATE_LIMIT_MAX
+        value: 120
+      - key: MAX_BODY_BYTES
+        value: 65536
